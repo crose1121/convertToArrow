@@ -13,10 +13,10 @@
     <p id="paragraph">
         This website is boring, with very little CSS.
         However, we really just care about the javascript.
-        For example, if you click <button id="button">this button</button>, the background of this paragraph tag
+        For example, if you click <button  onclick= "somefunction()" id="button">this button</button>, the background of this paragraph tag
         will change to blue.
     </p>
-    <p>We also have a <button id="alert">alert</button> button that will grab the text from the input below and show it
+    <p>We also have a <button  id="alert">alert</button> button that will grab the text from the input below and show it
         in a popup.</p>
     <div>
         <input type="text" id="popup-input">
@@ -31,7 +31,12 @@
         whatever is in this input: <input type="text" id='change-color'/>.
     </p>
     <script>
-        document.getElementById("button").onclick = () => {
+        // document.getElementById("button").onclick = () => {
+        //     setBackgroundColorById("paragraph", "blue");
+        // }
+
+        let somefunction =  () => {
+            console.log("hello, clicked button")
             setBackgroundColorById("paragraph", "blue");
         }
         document.getElementById("alert").onclick = () => {
